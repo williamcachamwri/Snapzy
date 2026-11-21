@@ -954,15 +954,14 @@ enum AnnotateAIDockProviderMenu {
     let newConversation = ClosureMenuItem(title: L10n.AnnotateAI.newConversation, keyEquivalent: "") {
       onNewConversation()
     }
-    newConversation.image = MenuBarItemImage.symbol("plus.bubble")
+    newConversation.image = NSImage(systemSymbolName: "plus.bubble", accessibilityDescription: nil)
     newConversation.isEnabled = hasConversation && !isRunning
     menu.addItem(newConversation)
     let settings = ClosureMenuItem(title: L10n.AnnotateAI.settings, keyEquivalent: "") {
       AnnotateAgentAISettings.open()
     }
-    settings.image = MenuBarItemImage.symbol("gearshape")
+    settings.image = NSImage(systemSymbolName: "gearshape", accessibilityDescription: nil)
     menu.addItem(settings)
-    MenuBarItemImage.enableIcons(in: menu)
     return menu
   }
 
